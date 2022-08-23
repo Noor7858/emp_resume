@@ -1,0 +1,27 @@
+== Resume builder
+
+=== Client and server are the folders
+    * Client is where the forms is residing and all the route information is handle basically react part of the application
+    * server - created a small server with node and express.
+
+=== How does it work
+* unzip the project folder emp_resume, which will have two folders client and server
+** Client  
+*** cd client folder
+*** type yarn install, it will install all dependecies from package.json
+*** type yarn start, client will up and running on port 3000, you access using http://localhost:3000
+*** It has two urls, 'resumebuilder' which contains the form, i have created a form with next and back button and some customization in experience page where user can add one more experiences.
+*** after filling the form, click on Submit will make an call to the api, to the node server, where it will write the data to json file specified as "newResume.json"
+*** and the screen will show click here to see your resume
+**** click on this will take you to the resume. attaching the screen shot for references.
+**** the json data is auto filled and kept for reference
+**** the /resume, will make an api call to fetch the data from json file, and update in the state variable.
+**** from where the values are picked up to display the resume.
+
+** Server
+* cd server folder
+*** type yarn install, it will install all dependecies from package.json
+*** type yarn start, client will up and running on port 5000, you access using http://localhost:5000
+*** two api's are written one post and one get,to read and write to the json file.
+
+* ascii doc is added inside the project directory itself for reference.
